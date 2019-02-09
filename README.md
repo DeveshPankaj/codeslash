@@ -1,4 +1,4 @@
-# codeslesh
+# codeslash
 
 This app is build on [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2
 and [Electron](https://github.com/electron/electron) version 4.0.3.
