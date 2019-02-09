@@ -1,0 +1,33 @@
+{
+  "dir": "/",
+  "children": [
+    {
+      "name": "bin",
+      "type": "folder",
+      "children": [
+        {
+          "name": "login",
+          "type": "folder",
+          "children": []
+        },
+        {
+          "name": "ping4",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "type": "folder",
+      "children": [
+        {
+          "name": "devesh",
+          "type": "folder",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
+
+

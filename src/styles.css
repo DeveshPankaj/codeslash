@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* CodeMirror */
+@import "~codemirror/lib/codemirror.css";
+@import "~codemirror/theme/ambiance.css";
+@import "~codemirror/theme/base16-dark.css";
+@import "~codemirror/theme/base16-light.css";
+@import "~codemirror/theme/bespin.css";
+@import "~codemirror/theme/blackboard.css";
+@import "~codemirror/theme/cobalt.css";
+@import "~codemirror/theme/colorforth.css";
+@import "~codemirror/theme/dracula.css";
+@import "~codemirror/theme/darcula.css";
+@import "~codemirror/theme/duotone-dark.css";
+@import "~codemirror/theme/duotone-light.css";
+@import "~codemirror/theme/eclipse.css";
+@import "~codemirror/theme/elegant.css";
+@import "~codemirror/theme/erlang-dark.css";
+@import "~codemirror/theme/gruvbox-dark.css";
+@import "~codemirror/theme/hopscotch.css";
+@import "~codemirror/theme/mbo.css";
+@import "~codemirror/theme/mdn-like.css";
+@import "~codemirror/theme/solarized.css";
+
+.ngx-codemirror {
+  /*border: 1px solid #ccc;*/
+  /*height: calc(100% - 65px);*/
+}
+
+.CodeMirror {
+  /*min-height:100vh;*/
+  height: calc(100vh - 109px);
+  /*font-size: 50px;*/
+  /*width: 400px;*/
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+ngx-codemirror{
+  /*position: absolute;*/
+  /*height: 100%;*/
+}
+
+app-code{
+  /*min-height:100vh;*/
+}
+
+
+/*theme*/
+.theme {
+  /*background-color: #444;*/
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+
+
+

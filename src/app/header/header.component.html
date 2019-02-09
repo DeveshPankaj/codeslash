@@ -1,0 +1,90 @@
+<mat-toolbar color="primary" class="drag theme">
+  <mat-toolbar-row class="theme">
+    <!--<span>Third Line</span>-->
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="no-drag">
+      <mat-icon>apps</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+
+      <button mat-menu-item (click)="newFile.emit(true)">
+        <mat-icon>add</mat-icon>
+        <span>New File</span>
+      </button>
+
+      <button mat-menu-item (click)="_openFile()">
+        <mat-icon>insert_drive_file</mat-icon>
+        <span>Open file</span>
+      </button>
+
+      <button mat-menu-item (click)="openFolderDialog()">
+        <mat-icon>folder</mat-icon>
+        <span>Open folder</span>
+      </button>
+
+
+      <!--<button mat-menu-item>-->
+      <!--<mat-icon>folder</mat-icon>-->
+      <!--<span>Open folder</span>-->
+      <!--</button>-->
+      <!--<button mat-menu-item disabled>-->
+      <!--<mat-icon>voicemail</mat-icon>-->
+      <!--<span>Check voicemail</span>-->
+      <!--</button>-->
+
+
+      <button *ngIf="isSettingsOpen" mat-menu-item (click)="closeLeft.emit(true)">
+        <mat-icon>close</mat-icon>
+        <span>Close project</span>
+      </button>
+      <button *ngIf="!isSettingsOpen" mat-menu-item (click)="openLeft.emit(true)">
+        <mat-icon>close</mat-icon>
+        <span>Open project</span>
+      </button>
+
+    </mat-menu>
+
+
+    <span class="example-spacer"></span>
+
+    <button *ngIf="!running" mat-icon-button (click)="runProgram()" class="no-drag play-btn" [matTooltip]="'run'">
+      <mat-icon aria-label="run program">play_arrow</mat-icon>
+    </button>
+
+    <button *ngIf="running" mat-icon-button (click)="stopProgram()" class="no-drag stop-btn" [matTooltip]="'stop'">
+      <mat-icon aria-label="run program">stop</mat-icon>
+    </button>
+
+
+    <section class="example-section">
+      <mat-slide-toggle
+        class="example-margin no-drag"
+        [matTooltip]="(isConsoleOpen?'Close':'Open')+' console'"
+        [matTooltipDisabled]="tooltip.openConsole.disabled"
+        [color]="'accent'"
+        [checked]="isConsoleOpen"
+        (change)="openSideConsole.emit(true)"
+      >
+      </mat-slide-toggle>
+    </section>
+
+
+    <mat-icon class="example-icon minimize-btn no-drag"
+              [matTooltip]="tooltip.minimizeBTN.msg"
+              [matTooltipDisabled]="tooltip.minimizeBTN.disabled"
+              (click)="minimizeWindow()">brightness_1
+    </mat-icon>
+    <mat-icon class="example-icon maximize-btn no-drag"
+              [matTooltip]="tooltip.maximizeBTN.msg"
+              [matTooltipDisabled]="tooltip.maximizeBTN.disabled"
+              (click)="maximizeWindow()"
+    >brightness_1
+    </mat-icon>
+
+    <mat-icon class="example-icon close-btn no-drag"
+              [matTooltip]="tooltip.closeBTN.msg"
+              [matTooltipDisabled]="tooltip.closeBTN.disabled"
+              (click)="closeWindow()">loupe
+    </mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>

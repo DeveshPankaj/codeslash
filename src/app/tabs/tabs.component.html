@@ -1,0 +1,40 @@
+<!--<div>-->
+<!--<span class="example-input-label"> Selected tab index: </span>-->
+<!--<mat-form-field>-->
+<!--<input matInput type="number" [formControl]="selected">-->
+<!--</mat-form-field>-->
+<!--</div>-->
+
+<h1 *ngIf="tabs.length===0">Open Any file</h1>
+
+<mat-tab-group [selectedIndex]="selected.value"
+               (selectedIndexChange)="_changeSelectedTab($event)"
+               animationDuration="0ms"
+>
+  <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab.name">
+
+
+    <ng-template mat-tab-label style="background-color: #444;">
+    {{tab.name}}&nbsp;&nbsp;&nbsp;
+    <mat-icon class="tab-close" (click)="closeTab.emit(index)" >close</mat-icon>
+    </ng-template>
+
+    <app-code [file]="tab"></app-code>
+    <!--<button mat-raised-button-->
+            <!--class="example-delete-tab-button"-->
+            <!--[disabled]="tabs.length === 1"-->
+            <!--(click)="removeTab(index)">-->
+      <!--Delete Tab-->
+    <!--</button>-->
+  </mat-tab>
+</mat-tab-group>
+
+
+<!--<div>-->
+  <!--<button mat-raised-button-->
+          <!--class="example-add-tab-button"-->
+          <!--(click)="addTab(selectAfterAdding.checked)">-->
+    <!--Add new tab-->
+  <!--</button>-->
+  <!--<mat-checkbox #selectAfterAdding> Select tab after adding</mat-checkbox>-->
+<!--</div>-->

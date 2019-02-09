@@ -1,0 +1,66 @@
+.example-icon {
+  padding: 0 2px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #ff4050;
+}
+
+.minimize-btn {
+  cursor: pointer;
+  color: gold;
+}
+.maximize-btn {
+  cursor: pointer;
+}
+
+.drag {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.play-btn {
+  cursor: grab;
+  color: green;
+}
+
+
+.play-btn:hover {
+  color: greenyellow;
+}
+
+.stop-btn {
+  color: red;
+  cursor: grab;
+}
+
+
+
+
+
+/* slide */
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+

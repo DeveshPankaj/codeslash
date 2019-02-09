@@ -1,0 +1,45 @@
+{
+    "types":{
+        "compile":"compile",
+        "interpreted":"scripting"
+    },
+    "languages": {
+        ".cpp": {
+            "type": "compile",
+            "name": "CPP",
+            "compiler":"g++",
+            "compile":"{__compiler} -o {__filedir}/{__filename} {__file_path_with_ext}",
+            "run":"./{__filename}"
+        },
+        ".c":{
+            "type": "compile",
+            "name": "C",
+            "compiler":"gcc"
+        },
+        ".py":{
+            "type": "scripting",
+            "name": "PYTHON",
+            "compiler":"python3",
+            "run":"{__compiler} {__file_path_with_ext}"
+        },
+        ".js":{
+            "type": "scripting",
+            "name": "JAVA-SCRIPT",
+            "compiler":"node",
+            "run":"{__compiler} {__file_path_with_ext}"
+        },
+        ".java":{
+            "type": "compile",
+            "name": "JAVA",
+            "compiler":"javac",
+            "run":"java"
+        }
+    },
+    "scripts": {
+    },
+    "cwd":"{__filedir}",
+    "HELP":"remove '.' from prefix while using inputFile/outputFile/errorLog file",
+    ".inputFile": "<path_of_input_file>",
+    ".outputFile": "<path_of_output_file>",
+    ".errorLog": "<path_of_error_log_file>"
+}

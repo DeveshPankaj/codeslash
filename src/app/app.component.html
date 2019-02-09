@@ -1,0 +1,63 @@
+<app-header
+  (openSideConsole)="openSideConsole()"
+  (runStop)="runStopProgram($event)"
+  [running]="running"
+  (openFolder)="openFolder($event)"
+  [_isSettingsOpen]="isSettingsOpen"
+  (openFile)="openFile($event)"
+  (openConsole)="sideConsoleState=!sideConsoleState"
+  [isConsoleOpen]="sideConsoleState"
+  (closeLeft)="isSettingsOpen=false"
+  (openLeft)="isSettingsOpen=true"
+  (newFile)="newFile()"
+></app-header>
+
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #settings class="example-sidenav" mode="side" [opened]="isSettingsOpen">
+    <!--<p>Auto-resizing sidenav</p>-->
+    <!--<p *ngIf="fullSettings">Lorem, ipsum dolor sit amet consectetur.</p>-->
+    <!--<button (click)="fullSettings=!fullSettings" mat-raised-button>-->
+      <!--Toggle extra text-->
+    <!--</button>-->
+    <app-tree *ngIf="showTree" [root]="root" (openFile)="openFile($event)"></app-tree>
+  </mat-drawer>
+
+  <mat-drawer #console class="example-sidenav" [style.width.px]='width' position="end" mode="side" [opened]="sideConsoleState">
+    <app-terminal [data]="consoleData"></app-terminal>
+    <div class="grabber"></div>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <!--<app-tabs1 [openFiles]="openFiles" (closeFile)="closeFile($event)"></app-tabs1>-->
+
+
+    <!--<button type="button" mat-button (click)="settings.toggle()">-->
+      <!--Toggle sidenav-->
+    <!--</button>-->
+    <!--<button type="button" mat-button (click)="console.toggle()">-->
+      <!--Toggle sidenav-->
+    <!--</button>-->
+
+    <app-tabs (currentTab)="currentTab($event)" [changeSelectedTab]="selectedTab" (closeTab)="removeTab($event)" [tabs]="tabs"></app-tabs>
+
+
+    <!--<app-my-tabs></app-my-tabs>-->
+
+    <!--<ng-template let-code="person" #personEdit>-->
+    <!--&lt;!&ndash;<h1>Code</h1>&ndash;&gt;-->
+      <!--<app-code></app-code>-->
+    <!--</ng-template>-->
+
+    <!--<button class="btn btn-default" (click)="onAddPerson()">Add new person</button>-->
+
+
+  </div>
+</mat-drawer-container>
+
+
+
+
+
+<!--<app-tabs1></app-tabs1>-->
+

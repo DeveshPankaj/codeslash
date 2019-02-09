@@ -1,0 +1,14 @@
+<ngx-codemirror
+  #ref
+  [options]="options"
+  [ngModel]="file.data"
+  [disabled]="readOnly"
+  [autoFocus]="true"
+  (ngModelChange)="handleChange($event)"
+  (focusChange)="focusChange($event)"
+  (scroll)="scroll($event)"
+  (cursorActivity)="cursorActivity($event)"
+  [ngStyle]="{'font-size':fontSize+'px'}"
+>
+</ngx-codemirror>
+
