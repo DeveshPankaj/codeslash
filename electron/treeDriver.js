@@ -10,8 +10,12 @@ function getDir(dir) {
     dir,
     children: []
   };
+
   return new Promise((resolve, reject) => {
-    fs.readdir(dir, (err, files) => {
+    fs.readdir(dir, (err, files=[]) => {
+
+      if(err) throw err
+
       let i = files.length;
       files.forEach(file => {
         if (file[0] !== '.' || show_hidden) {

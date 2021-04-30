@@ -246,7 +246,8 @@ function createWindow() {
   win = new BrowserWindow({
     width: 1100,
     height: 800,
-    frame: false
+    frame: false,
+    nodeIntegration: true
   });
 
   if(settings.production){
@@ -265,7 +266,7 @@ function createWindow() {
 
 
   if(!settings.production){
-  	// win.webContents.openDevTools();
+  	win.webContents.openDevTools();
   }
   
 

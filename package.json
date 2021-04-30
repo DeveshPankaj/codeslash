@@ -4,7 +4,6 @@
   "description": "My first desktop app",
   "author": "Pankaj Devesh <pankajdevesh3@gmail.com>",
   "main": "main.js",
-
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +14,9 @@
     "electron": "electron ."
   },
   "build": {
-    "directories": { "output": "release/" },
+    "directories": {
+      "output": "release/"
+    },
     "appId": "com.chhekur.colon",
     "mac": {
       "category": "",
@@ -68,15 +69,15 @@
     "ngx-electron": "^2.1.1",
     "path": "^0.12.7",
     "rxjs": "^6.3.3",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.1",
     "socket.io-client": "^2.2.0",
-    "tree-kill": "^1.2.1",
+    "tree-kill": "^1.2.2",
     "tslib": "^1.9.0",
     "url": "^0.11.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.12.0",
+    "@angular-devkit/build-angular": "^0.10.0",
     "@angular/cli": "~7.2.2",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",

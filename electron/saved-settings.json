@@ -1,5 +1,14 @@
 {
-  "openTabs": [],
-  "openFolder": "/home/devesh/Desktop/untitled/electron",
+  "openTabs": [
+    {
+      "name": "utils.ts",
+      "path": "D:\\Desktop\\serverlass\\target"
+    },
+    {
+      "name": "index.ts",
+      "path": "D:\\Desktop\\serverlass\\src"
+    }
+  ],
+  "openFolder": "D:\\Desktop\\serverlass",
   "default": "about"
 }
